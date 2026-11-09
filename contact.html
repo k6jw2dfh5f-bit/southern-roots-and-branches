@@ -5,14 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Southern Roots and Branches</title>
 <link rel="stylesheet" href="styles.css">
-<style>
-  form { max-width: 640px; margin: 1.5rem auto; }
-  label { display: block; margin-top: 1rem; font-weight: bold; color: #1a3c34; }
-  input, select, textarea { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ccc; border-radius: 4px; }
-  button { background: #c4a574; color: #1a3c34; padding: 0.8rem 1.8rem; border: none; border-radius: 4px; font-weight: bold; margin-top: 1.5rem; cursor: pointer; }
-  .pdf-box { background: #f7f3eb; border: 1px solid #c4a574; padding: 1.2rem; margin: 1.5rem 0; border-radius: 6px; text-align: center; }
-  .pdf-box a { color: #1a3c34; font-weight: bold; }
-</style>
 </head>
 <body>
 <header>
@@ -36,56 +28,56 @@
 
 <section>
   <div class="container">
-    <h2>Request a Consultation</h2>
-    <p>Tell us about your project. We serve clients locally in Conecuh County and South Alabama as well as nationwide through remote research. Traditional documentary research only — no DNA services.</p>
+    <h2>Client Research Request</h2>
+    <p>You can submit your request online below or download the printable Research Request Form.</p>
 
-    <div class="pdf-box">
-      <strong>Prefer a printable form?</strong><br>
-      <a href="Southern_Roots_and_Branches_Research_Request_Form.pdf" download>Download the Research Request Form (PDF)</a>
+    <div style="background:#f8f4ef; border:1px solid #e0d8cc; border-radius:6px; padding:1.2rem; margin:1.5rem 0; text-align:center;">
+      <p style="margin:0 0 0.8rem 0;"><strong>Download the Research Request Form (PDF)</strong></p>
+      <p style="margin:0 0 1rem 0; font-size:0.95rem;">Print, complete, and return by email, or use the online form below.</p>
+      <a href="Southern_Roots_and_Branches_Research_Request_Form.pdf" download style="display:inline-block; background:#2d5a4e; color:white; padding:0.7rem 1.4rem; text-decoration:none; border-radius:4px; font-family:Arial,sans-serif;">Download PDF Form</a>
     </div>
+
+    <h3>Online Intake Form</h3>
+    <p>Traditional documentary research only — no DNA services.</p>
     
-    <!-- Formspree form — replace YOUR_FORM_ID after signing up at formspree.io -->
+    <!-- Formspree endpoint: replace YOUR_FORM_ID after creating the form -->
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>Full Name *</label>
-      <input type="text" name="name" required>
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required>
 
-      <label>Email Address *</label>
-      <input type="email" name="email" required>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
 
-      <label>Phone Number</label>
-      <input type="tel" name="phone">
+      <label for="phone">Phone (optional)</label>
+      <input type="tel" id="phone" name="phone">
 
-      <label>Type of Research Needed *</label>
-      <select name="research_type" required>
-        <option value="">Select one</option>
+      <label for="research_type">Type of Research Needed *</label>
+      <select id="research_type" name="research_type" required>
+        <option value="">Please select…</option>
         <option value="Family History Research">Family History Research</option>
         <option value="Heir / Probate Kinship Report">Heir / Probate Kinship Report</option>
         <option value="Lineage Society Application">Lineage Society Application</option>
-        <option value="Brick Wall Consultation">Brick Wall Consultation</option>
-        <option value="Other">Other</option>
+        <option value="Other / Not Sure">Other / Not Sure</option>
       </select>
 
-      <label>County / State of Primary Interest</label>
-      <input type="text" name="location" placeholder="e.g., Conecuh County, Alabama">
+      <label for="location">Primary Research Location(s)</label>
+      <input type="text" id="location" name="location" placeholder="e.g., Conecuh County, Alabama">
 
-      <label>How did you hear about us?</label>
-      <input type="text" name="referral_source">
+      <label for="description">Brief Description of Your Project *</label>
+      <textarea id="description" name="description" rows="6" required></textarea>
 
-      <label>Brief Description of Your Project *</label>
-      <textarea name="description" rows="6" required placeholder="Please include any known names, dates, or specific questions."></textarea>
+      <input type="hidden" name="_subject" value="New Genealogy Client Intake — Southern Roots and Branches">
 
-      <input type="hidden" name="_subject" value="New Genealogy Research Inquiry — Southern Roots and Branches">
-      
-      <button type="submit">Submit Research Request</button>
+      <button type="submit">Submit Request</button>
     </form>
 
-    <p style="margin-top:2rem; text-align:center; font-style:italic;">Submissions create a new issue in our Linear project so we can respond promptly.</p>
+    <p style="margin-top:2rem; text-align:center; font-style:italic;">Based in Conecuh County, Alabama • Serving clients locally and nationwide via remote research</p>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>Southern Roots and Branches • Conecuh County, Alabama • Traditional Documentary Research • No DNA Services</p>
+    <p>Southern Roots and Branches • Conecuh County, Alabama • Traditional Documentary Research</p>
   </div>
 </footer>
 </body>
